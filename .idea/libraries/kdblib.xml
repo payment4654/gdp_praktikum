@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="kdblib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/kdblib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
