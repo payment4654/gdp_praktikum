@@ -2,15 +2,24 @@ import java.util.Scanner;
 
 public class CaeserChiffre {
 
+    private static Scanner scan = new Scanner(System.in);
+
     public void verschluesseln()
     {
         System.out.println("Bitte geben Sie einen Text ein:");
-        Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
-        String output = "";
-        char zeichen = 0;
-        boolean groß = false;
+        scan.close();
+        
         System.out.println(input + input.length());
+        String output = verschlüsseleInput(input);
+        System.out.println(output);
+    }
+
+    // ausgelagert
+    private String verschlüsseleInput(String input) {
+        String output = "";
+        char zeichen;
+        boolean groß;
         for(int i = 0; i<input.length();i++)
         {
             zeichen = input.charAt(i);
@@ -27,7 +36,7 @@ public class CaeserChiffre {
                 zeichen = 32;
             output += zeichen;
         }
-        System.out.println(output);
+        return output;
     }
 
     public void verschluesseln(int k)
@@ -59,5 +68,6 @@ public class CaeserChiffre {
             output += zeichen;
         }
         System.out.println(output);
+        scan.close();
     }
 }
