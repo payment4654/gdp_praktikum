@@ -8,10 +8,18 @@ import gmbh.kdb.hsw.gdp.domain.Office;
 public class GameDevStudioAdapter {
 
     private GameDevStudio gameDevStudio;
-
+    private OfficeAdapter officeAdapter;
+    
     public GameDevStudioAdapter(GameDevStudio gameDevStudio) {
         this.gameDevStudio = gameDevStudio;
+
     }
+
+    public void printOffices() {
+        officeAdapter = new OfficeAdapter();
+        officeAdapter.printOffices(gameDevStudio);
+    }
+
 
     public double calculateDaysLeft() {
         double daysLeft = gameDevStudio.getCash().getValue().doubleValue()
